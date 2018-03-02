@@ -24,7 +24,7 @@
   <div class="card-body">
     <p class="card-text">${cart.name}
 						<br>${cart.price}円
-						<br>M サイズ</p>
+						<br>${cart.size}サイズ</p>
 
 <div class="custom-control custom-checkbox">
   <input type="checkbox" class="custom-control-input" id="${cart.id}" name="delete_item_id_list" value="${cart.id}">

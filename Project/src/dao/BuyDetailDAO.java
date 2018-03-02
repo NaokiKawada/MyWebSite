@@ -27,9 +27,10 @@ public class BuyDetailDAO {
 		try {
 			con = DBManager.getConnection();
 			st = con.prepareStatement(
-					"INSERT INTO buy_detail(buy_id,item_id) VALUES(?,?)");
+					"INSERT INTO buy_detail(buy_id,item_id,size) VALUES(?,?,?)");
 			st.setInt(1, bddb.getBuyId());
 			st.setInt(2, bddb.getItemId());
+			st.setString(3, bddb.getSize());
 			st.executeUpdate();
 			System.out.println("inserting BuyDetail has been completed");
 
@@ -66,6 +67,7 @@ public class BuyDetailDAO {
 				bddb.setId(rs.getInt("id"));
 				bddb.setBuyId(rs.getInt("buy_id"));
 				bddb.setItemId(rs.getInt("item_id"));
+				bddb.setSize(rs.getString("size"));
 				buyDetailList.add(bddb);
 			}
 

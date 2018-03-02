@@ -20,7 +20,7 @@
 				<div class="form-group row">
 					<label for="inputPassword" class="col-sm-2 col-form-label">アイテムID</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputPassword" placeholder="Item ID" name="loginid">
+						<input type="text" class="form-control" id="inputPassword" placeholder="Item ID" name="id">
 					</div>
 				</div>
 				<div class="form-group row">

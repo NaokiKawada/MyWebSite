@@ -36,4 +36,6 @@ public class ItemList extends HttpServlet {
   	  	RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/itemlist.jsp");
         dispatcher.forward(request, response);
 	}
+
+
 }

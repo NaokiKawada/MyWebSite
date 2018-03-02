@@ -50,7 +50,8 @@ public class ItemSearchResult extends HttpServlet {
 
 		  	  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/itemsearchresult.jsp");
 		        dispatcher.forward(request, response);
-		        } catch (Exception e) {
+		        }
+		catch (Exception e) {
 			e.printStackTrace();
 			session.setAttribute("errorMessage", e.toString());
 			response.sendRedirect("Error");

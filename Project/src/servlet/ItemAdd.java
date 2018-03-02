@@ -30,8 +30,13 @@ public class ItemAdd extends HttpServlet {
 				//対象のアイテム情報を取得
 				ItemDataBeans item = ItemDAO.getItemByItemID(id);
 
+				String size =request.getParameter("selectsize");
+
+				item.setSize(size);
+
 				//追加した商品を表示するためリクエストパラメーターにセット
 				request.setAttribute("item", item);
+
 
 				//カートを取得
 				ArrayList<ItemDataBeans> cart = (ArrayList<ItemDataBeans>) session.getAttribute("cart");
@@ -42,6 +47,7 @@ public class ItemAdd extends HttpServlet {
 				}
 				//カートに商品を追加。
 				cart.add(item);
+
 				//カート情報更新
 				session.setAttribute("cart", cart);
 				request.setAttribute("cartActionMessage", "商品を追加しました");

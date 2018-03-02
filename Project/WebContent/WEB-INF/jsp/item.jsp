@@ -20,7 +20,7 @@
 				<div class="col s6">
 					<h4>${item.name}</h4>
 					<h5>${item.price}円</h5>
-					<p>${item.detail}</p>
+					<pre>${item.detail}</pre>
 					<p>【お届け納期】<br>
    					ご注文いただいてから、最短翌日～1週間程度でお届け予定です。
    					</p>
@@ -28,15 +28,15 @@
 
 
 <div class="custom-control custom-radio marginunder">
-  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-  <label class="custom-control-label" for="customRadio1">S  (150cm ～ 165cm)</label>
+  <input type="radio" id="customRadio1" name="selectsize" class="custom-control-input" value="S">
+  <label class="custom-control-label" for="customRadio1" >S  (150cm ～ 165cm)</label>
 </div>
 <div class="custom-control custom-radio marginunder">
-  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+  <input type="radio" id="customRadio2" name="selectsize" class="custom-control-input" value="M">
   <label class="custom-control-label" for="customRadio2">M (160cm ～ 175cm)</label>
 </div>
 <div class="custom-control custom-radio">
-  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+  <input type="radio" id="customRadio3" name="selectsize" class="custom-control-input" value="L">
   <label class="custom-control-label" for="customRadio3">L  (170cm ～ 185cm)</label>
 </div>
 <br>

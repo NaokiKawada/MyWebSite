@@ -8,6 +8,7 @@ public class ItemDataBeans implements Serializable {
 	private String detail;
 	private int price;
 	private String fileName;
+	private String size;
 
 
 	public ItemDataBeans(int idData, String nameDATA, String detailDATA, int priceData, String fileNameDATA) {
@@ -49,6 +50,12 @@ public class ItemDataBeans implements Serializable {
 	}
 	public void setFileName(String filename) {
 		this.fileName = filename;
+	}
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
 	}
 
 

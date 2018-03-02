@@ -323,5 +323,34 @@ public class UserDAO {
         }
     }
 
+	public void delete(int UserId) {
+        Connection conn = null;
+
+        try {
+            // データベースへ接続
+            conn = DBManager.getConnection();
+
+            // SELECT文を準備
+            String sql = "DELETE FROM user where id = ?";
+
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setInt(1, UserId);
+            pStmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // データベース切断
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+	}
+
 
 }

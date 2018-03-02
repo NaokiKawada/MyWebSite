@@ -56,8 +56,8 @@
   <tbody>
    <c:forEach var="userItem" items="${UserDataList}">
     <tr>
-        <td scope="row" align="center"><a href="UserBuyHistoryDetail?buy_id=${userItem.id}" class="bt-samp41">▽</a></td>
-		<td class="center">${userItem.formatDate}</td>
+        <td scope="row" align="center"><div align="center"><a href="UserBuyHistoryDetail?buy_id=${userItem.id}" class="bt-samp41">▽</a></div></td>
+		<td class="center"><div align="center">${userItem.formatDate}</div></td>
 		<td class="center"><div align="center">${userItem.deliveryMethodName}</div></td>
 		<td class="center"><div align="center">${userItem.totalPrice}円</div></td>
     </tr>

@@ -12,6 +12,7 @@
   <thead>
     <tr>
       <td scope="col" align=center >商品名</td>
+   　　　　<td scope="col" align=center >サイズ</td>
       <td scope="col" align=center >単価</td>
       <td scope="col" align=center >小計</td>
     </tr>
@@ -20,13 +21,14 @@
   <c:forEach var="cartInItem" items="${cart}">
     <tr>
       <td>${cartInItem.name}</td>
+      <td align=right>${cartInItem.size}</td>
       <td align=right>${cartInItem.price}円</td>
       <td align=right>${cartInItem.price}円</td>
     </tr>
   </c:forEach>
 
     <tr>
-      <td  align=right colspan="3" >
+      <td  align=right colspan="4" >
       <div class="btn-group">
 
 <select class="custom-select custom-select " name="delivery_method_id">
@@ -39,7 +41,7 @@
       </td>
        </tr>
     <tr>
-      <td  align=center colspan="3" >
+      <td  align=center colspan="4" >
       <button type="submit" name="action" class="btn btn-dark">注文内容を確認する</button>
       </td>
        </tr>

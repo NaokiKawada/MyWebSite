@@ -227,4 +227,33 @@ public class ItemDAO {
 		}
 	}
 
+	public void delete(int ItemId) {
+        Connection conn = null;
+
+        try {
+            // データベースへ接続
+            conn = DBManager.getConnection();
+
+            // SELECT文を準備
+            String sql = "DELETE FROM item where id = ?";
+
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setInt(1, ItemId);
+            pStmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // データベース切断
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+	}
+
+
 }

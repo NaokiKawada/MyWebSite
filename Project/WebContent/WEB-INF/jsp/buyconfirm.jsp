@@ -11,6 +11,7 @@
   <thead>
     <tr>
       <td scope="col" align=center >商品名</td>
+      <td scope="col" align=center >サイズ</td>
       <td scope="col" align=center >単価</td>
       <td scope="col" align=center >小計</td>
     </tr>
@@ -20,6 +21,7 @@
   <c:forEach var="cartIDBList" items="${cartIDBList}">
     <tr>
       <td>${cartIDBList.name}</td>
+      <td align=right>${cartIDBList.size}</td>
       <td align=right>${cartIDBList.price}円</td>
       <td align=right>${cartIDBList.price}円</td>
     </tr>
@@ -27,15 +29,17 @@
     <tr>
       <td>${bdb.deliveryMethodName}</td>
       <td align=right></td>
+      <td align=right></td>
       <td align=right>${bdb.deliveryMethodPrice}円</td>
     </tr>
     <tr>
+      <td></td>
       <td></td>
       <td align=right>合計</td>
       <td align=right>${bdb.totalPrice}円</td>
     </tr>
     <tr>
-      <td  align=center colspan="3" >
+      <td  align=center colspan="4" >
      	<form action="BuyResult" method="post">
       <button type="submit" name="action" class="btn btn-dark">注文を確定する</button>
       　   </form>
