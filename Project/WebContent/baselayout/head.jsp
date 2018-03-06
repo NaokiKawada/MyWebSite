@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-dark bg-dark">
 <div class="container">
-<a class="text-white" ><font size="2">ユニフォーム専門店</font><a align="right"class="text-white"><font size="2">Welcome!
+<a class="text-white" ><font size="2"></font><a align="right"class="text-white"><font size="2">Welcome!
 <c:if test="${userInfo.name != null}">
 ${userInfo.name}様
 </c:if>

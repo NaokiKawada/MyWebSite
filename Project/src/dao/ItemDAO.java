@@ -256,4 +256,74 @@ public class ItemDAO {
 	}
 
 
+	/*
+	 * マスタで商品を追加するためのメソッド
+	 * */
+    public static void itemadd(int itemid,String name,String detail, int price,String img) {
+        Connection conn = null;
+
+        try {
+            // データベースへ接続
+            conn = DBManager.getConnection();
+
+            // SELECT文を準備
+            String sql = "INSERT INTO item (id, name, detail, price,file_name) VALUES (? , ? , ? , ?, ?)";
+
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setInt(1, itemid);
+            pStmt.setString(2, name);
+            pStmt.setString(3, detail);
+            pStmt.setInt(4, price);
+            pStmt.setString(5, img);
+            pStmt.executeUpdate();
+
+            System.out.println("incert compppppppppppp!!!!!!!!!!!!!!!!!!!!!!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // データベース切断
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();                }
+            }
+        }
+    }
+
+	public static void itemupdate(int itemId,String name, String detail, String img) {
+        Connection conn = null;
+
+        try {
+            // データベースへ接続
+            conn = DBManager.getConnection();
+
+            // SELECT文を準備
+            String sql = "update item set name = ? , detail = ?, file_name = ? where id = ?";
+
+            PreparedStatement pStmt = conn.prepareStatement(sql);
+            pStmt.setString(1, name);
+            pStmt.setString(2, detail);
+            pStmt.setString(3, img);
+            pStmt.setInt(4, itemId);
+            pStmt.executeUpdate();
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // データベース切断
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
 }

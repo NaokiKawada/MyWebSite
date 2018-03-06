@@ -13,7 +13,7 @@
 			<h1>アイテム一覧</h1>
 			<br />
 			<div align="right">
-				<a class="btn bg-dark text-white btn-sm" href="file:///C:/Users/naoki/Documents/git/MyWebSite/Mock/newitem.html" role="button">新規登録</a>
+				<a class="btn bg-dark text-white btn-sm" href="NewItem" role="button">新規登録</a>
 			</div>
 			<br />
 	<form action="UserList" method="post">

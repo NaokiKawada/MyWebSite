@@ -34,7 +34,7 @@
 			  <div class="form-group row">
 			    <label for="staticEmail" class="col-sm-2 col-form-label">価格</label>
 			    <div class="col-sm-10">
-			      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="${item.price}">
+			      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="${item.price}円">
 			    </div>
 			  </div>
 			  <div class="form-group row">

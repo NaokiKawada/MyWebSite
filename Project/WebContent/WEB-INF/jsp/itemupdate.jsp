@@ -6,41 +6,41 @@
 	  <div class="container "><br/><br/>
 
 	    <div align="center">
-	    <h1>アイテム新規登録</h1></div><br/>
+	    <h1>アイテム情報更新</h1></div><br/>
 
 	    		<p class="text-danger">
   			${error}
 		</p>
 
-<form action="NewItem" method="post">
+<form action="ItemUpDate" method="post">
   <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">アイテムID</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword" placeholder="Item ID" name = "itemid">
+    <label for="staticEmail" class="col-sm-2 col-form-label">アイテムID</label>
+     <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="${item.id}" name ="id">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputPassword" class="col-sm-2 col-form-label">アイテム名</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword" placeholder="Item Name" name="name">
+      <input type="text" class="form-control" id="inputPassword" placeholder="Item Name" value="${item.name}" name="name">
     </div>
   </div>
 
   <div class="form-group row">
     <label for="inputPassword" class="col-sm-2 col-form-label">商品説明</label>
     <div class="col-sm-10">
-      <textarea name="detail" rows="5" cols="123" placeholder="  detail"></textarea>
+      <textarea  name="detail" rows="5" cols="123" type="text" class="form-control" id="inputPassword" placeholder="  detail" ></textarea>
     </div>
   </div>
 
 <div>
 <a>画像</a>
-  <a class="marginleft6"><input type='file' name="img"></a>
+  <a class="marginleft6"><input type='file' name="img" value="${item.fileName}"></a>
 </div>
 <br>
 <br/>
   <div align="center">
-  <button type="submit" name="action" class="btn btn-dark">　　登 録　　</button>
+  <button type="submit" name="action" class="btn btn-dark">　　更 新　　</button>
   </div>
 </form>
 <br/>
